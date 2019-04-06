@@ -155,7 +155,7 @@ class BPTTLanguageModelDataHandler(DataHandler):
                 shard_dataset,
                 batch_size=batch_size,
                 bptt_len=self.bptt_len,
-                device="cuda:{}".format(torch.cuda.curren_device())
+                device="cuda:{}".format(torch.cuda.current_device())
                 if cuda.CUDA_ENABLED
                 else "cpu",
                 sort_within_batch=True,
@@ -195,7 +195,7 @@ class BPTTLanguageModelDataHandler(DataHandler):
                 test_data,
                 batch_size=batch_size,
                 bptt_len=self.bptt_len,
-                device="cuda:{}".format(torch.cuda.curren_device())
+                device="cuda:{}".format(torch.cuda.current_device())
                 if cuda.CUDA_ENABLED
                 else "cpu",
                 sort=True,
